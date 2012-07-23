@@ -1,0 +1,29 @@
+<h1>Listing zhihus</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Tags</th>
+    <th>Desc</th>
+    <th>Answer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @zhihus.each do |zhihu| %>
+  <tr>
+    <td><%= zhihu.title %></td>
+    <td><%= zhihu.tags %></td>
+    <td><%= zhihu.desc %></td>
+    <td><%= zhihu.answer %></td>
+    <td><%= link_to 'Show', zhihu %></td>
+    <td><%= link_to 'Edit', edit_zhihu_path(zhihu) %></td>
+    <td><%= link_to 'Destroy', zhihu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Zhihu', new_zhihu_path %>

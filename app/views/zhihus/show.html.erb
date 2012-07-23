@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @zhihu.title %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @zhihu.tags %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @zhihu.desc %>
+</p>
+
+<p>
+  <b>Answer:</b>
+  <%= @zhihu.answer %>
+</p>
+
+
+<%= link_to 'Edit', edit_zhihu_path(@zhihu) %> |
+<%= link_to 'Back', zhihus_path %>
